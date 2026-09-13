@@ -1,17 +1,23 @@
 # dallas-hvac-lead-qualifier
 
-AI lead qualifier + human-in-the-loop untuk owner HVAC Dallas.
+AI lead qualifier with human-in-the-loop routing for a Dallas HVAC business.
 
 ## Problem
-Lead masuk saat tim di job / malam. Iklan sudah dibayar, tidak ada yang balas.
+
+Leads arrive while the crew is on a job or after hours. Ad spend is already paid, but nobody replies in time.
 
 ## Scoring
-- Darurat → telepon + SMS owner
-- Normal (termasuk luar area) → staff
-- Buang (spam / iseng) → catatan saja
+
+- Urgent → call + SMS the owner immediately
+- Normal (including out-of-area) → route to staff
+- Junk (spam / prank) → log only
 
 ## Flow
-lead masuk → extract → score → auto-reply → sheet → routing manusia
+
+```text
+lead in → extract → score → auto-reply → sheet → human routing
+```
 
 ## Samples
-Lihat `samples/leads.json`
+
+See `samples/leads.json`.
